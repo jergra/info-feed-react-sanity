@@ -29,14 +29,14 @@ client side, and therefore only works locally.
 
 The previous project:
     https://github.com/jergra/NewsAPI-app
-    C:\dev\news-api-app
+    C:\dev\news-api-app (old computer)
 
 
 start:
     npm run dev
 
 deployed:
-    
+    https://news-feed-react-sanity.vercel.app/
 
 update:
     git add .

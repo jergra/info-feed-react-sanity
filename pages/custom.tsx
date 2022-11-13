@@ -13,17 +13,11 @@ const Custom = ({...props}) => {
     let text = props.customString;
     const urls = text.split(" ");
     const window1: any = window.open("", "w1", 'height=' + screen.height + ',width=' + screen.width + ',resizable=yes,scrollbars=yes');
-    let x = Math.floor((Math.random() * (urls.length)) + 1);
+    let x = Math.floor((Math.random() * (urls.length - 7)) + 1);
     window1.focus();
-
-    if (x < urls.length - 7) {
-        window1.location = urls[x]
-    } else {
-        let x = Math.floor((Math.random() * (urls.length - 8)) + 1);
-        window1.location = urls[x]
-    }
-
-
+    window1.location = urls[x]
+    
+        
     function newPage() {
         let x = Math.floor((Math.random() * (urls.length)) + 1);
         if (x < urls.length - 7) {
