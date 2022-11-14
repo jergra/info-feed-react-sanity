@@ -8,6 +8,8 @@ Derived from tutorial:
 
     by PortEXE
 
+Built with react, next, sanity.io, tailwind.
+
 This app retrieves news articles through NewsAPI 
 based on either one or two interests chosen at 
 random from a list of personal interests.
@@ -16,8 +18,8 @@ This list of personal interests is stored in a sanity.io
 database which can be updated by clicking 'Edit Terms' to go 
 to an online interface that sanity.io makes available.
 
-Going to the second page activates a news websites feed which
-could be run on a second screen at which one might
+Going to the second page activates an informational websites feed 
+which could be run on a second screen at which one might
 glance from time to time.
 
 In order for a deployed build to work, it is necessary 

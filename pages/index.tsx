@@ -32,7 +32,7 @@ const Home = ({...props}) => {
     return (
     <>
       <Head>
-        <title>news-feed</title>
+        <title>NewsAPI Search</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
@@ -47,7 +47,7 @@ const Home = ({...props}) => {
                 className="absolute pt-1 pb-1 pl-3 pr-3 text-sm font-bold text-teal-700 rounded 
                     right-4 top-4 border-2 border-teal-700 hover:bg-teal-700 hover:text-white"
             >
-                <Link href="/custom">News Feed</Link>
+                <Link href="/custom">Info Feed</Link>
             </button>
           <div>
             <div className='flex w-full mt-20'>
