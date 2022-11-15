@@ -91,7 +91,7 @@ const Custom = ({...props}) => {
     useEffect(() => {
         const interval = setInterval(() => {
           newPage()
-        }, 24000);
+        }, 240000);
         return () => clearInterval(interval);
       }, []);
      
