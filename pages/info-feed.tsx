@@ -32,7 +32,7 @@ const Custom = ({...props}) => {
             window1.location = urls[x]
         } else {
             const z = Math.floor(Math.random() * 2 + 1);
-            console.log('z:', z)
+            // console.log('z:', z)
             const randomNumber1 = Math.floor(Math.random() * props.terms.length)
             const randomNumber2 = Math.floor(Math.random() * props.terms.length)
             const randomNumber3 = Math.floor(Math.random() * props.terms.length)
