@@ -47,7 +47,7 @@ const Home = ({...props}) => {
                 className="absolute pt-1 pb-1 pl-3 pr-3 text-sm font-bold text-teal-700 rounded 
                     right-4 top-4 border-2 border-teal-700 hover:bg-teal-700 hover:text-white"
             >
-                <Link href="/custom">Info Feed</Link>
+                <Link href="/info-feed">Info Feed</Link>
             </button>
           <div>
             <div className='flex w-full mt-20'>
@@ -118,45 +118,24 @@ export const getServerSideProps = async () => {
     const choicesFromSanity = '*[_type == "choices"]'
     const choicesFetched = await client.fetch(choicesFromSanity)
 
-    // console.log('choicesFetched:', choicesFetched)
-    // console.log('choicesFetched[0].random:', choicesFetched[0].random)
-    // console.log('choicesFetched[0].custom:', choicesFetched[0].custom)
-        
-    // const apiResponseTerms = await fetch(
-    //     'https://my-json-server.typicode.com/jergra/news-api-app-next/terms'
-    // )
-    
-    // const termsJSON = await apiResponseTerms.json()
-    // console.log('termsJSON fetched from db.json at github:', termsJSON)
-
-    // const termsString = termsJSON[0]
-    // console.log('termsString from termsJSON[0]:', termsString)
-
     const termsString = choicesFetched[0].random
 
     const terms = termsString.split(' ')
-    // console.log("terms array from termsString.split(' '):", terms)
-    // console.log('terms.length:', terms.length)
-
+    
     let oneOrTwo = Math.floor(Math.random() * 2 + 1)
-    //console.log('one or two:', oneOrTwo)
     
     if (oneOrTwo === 1) {
         let randomPosition = Math.floor(Math.random() * terms.length)
         var selected = terms[randomPosition]
-        //console.log('one query term chosen in NewsList:', selected)
     }
     if (oneOrTwo === 2) {
         var randomPosition1 = Math.floor(Math.random() * terms.length)
         var randomPosition2 = Math.floor(Math.random() * terms.length)
         selected = terms[randomPosition1] + ' ' + terms[randomPosition2]
-        //console.log('two query terms chosen in NewsList:', selected)
     }
 
     const query = selected
 
-    //console.log('query in getServerSideProps:', query)
-    
     const apiResponse = await fetch(
         `https://newsapi.org/v2/everything?q=${query}`,
         {
@@ -167,8 +146,7 @@ export const getServerSideProps = async () => {
     )
 
     const articles = await apiResponse.json()
-    //console.log('articles in getServerSideProps:', articles)
-
+    
     return {
         props: {
             articles,

@@ -1,8 +1,12 @@
-nov 12, 2022
+nov 13, 2022
 
 C:\dev\info-feed (new computer)
 
-Derived from tutorial:
+Extension of my earlier project:
+    https://github.com/jergra/newsapi-react-next-sanity
+    C:\dev\newsapi-react-next-sanity (old computer)
+
+which was derived from tutorial:
     Beginner Next.js Tutorial - Coding A News App With Next.js
     https://www.youtube.com/watch?v=xtItzwYG6oQ
 
@@ -11,27 +15,16 @@ Derived from tutorial:
 Built with react, next, sanity.io, tailwind.
 
 This app retrieves news articles through NewsAPI 
-based on either one or two interests chosen at 
-random from a list of personal interests.
+using one or two search terms selected at random
+from a list of personal interests and random words.
 
-This list of personal interests is stored in a sanity.io 
+This list of terms is stored in a sanity.io 
 database which can be updated by clicking 'Edit Terms' to go 
 to an online interface that sanity.io makes available.
 
 Going to the second page activates an informational websites feed 
 which could be run on a second screen at which one might
 glance from time to time.
-
-In order for a deployed build to work, it is necessary 
-to connect to NewsAPI from the server side, which is 
-what this build does.
-
-In a previous project, the api call to NewsAPI is from the 
-client side, and therefore only works locally.
-
-The previous project:
-    https://github.com/jergra/NewsAPI-app
-    C:\dev\news-api-app (old computer)
 
 
 start:
