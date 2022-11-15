@@ -31,7 +31,7 @@ start:
     npm run dev
 
 deployed:
-    https://news-feed-react-sanity.vercel.app/
+    https://info-feed-react-sanity.vercel.app/
 
 update:
     git add .
@@ -39,14 +39,14 @@ update:
     git push
 
 
-To remake the database, go into news-feed-database/schemas/ and change
+To remake the database, go into info-feed-database/schemas/ and change
 the files there, then run 'sanity init', answer some questions,
 then run 'sanity start', add some new content using the interface.
 The projectId has now changed.  Put the new projectId into lib/client
 in the root. A new API token is also needed, which will go in .env.
 Therefore the environment variable at Vercel also needs to be updated.
-Sanity Studio also needs to be redeployed. cd into the database folder (news-feed-database) 
-and run 'sanity deploy'.
+Sanity Studio also needs to be redeployed. cd into the database folder 
+(info-feed-database) and run 'sanity deploy'.
 'sanity help' will bring up help.
 Run 'npm run dev' in the root.
 
