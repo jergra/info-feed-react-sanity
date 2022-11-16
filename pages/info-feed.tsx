@@ -7,7 +7,7 @@ import { BsGithub } from 'react-icons/bs';
 
 const Custom = ({...props}) => {
 
-    const [showTop, setShowTop] = useState(false);
+    // const [showTop, setShowTop] = useState(false);
 
     // console.log('props.customString:', props.customString)
 
@@ -96,25 +96,25 @@ const Custom = ({...props}) => {
         return () => clearInterval(interval);
       }, []);
      
-    useEffect(() => {
-        const onScroll = () => {
-            if (window.pageYOffset > 10) {
-                setShowTop(true)
-            } else {
-                setShowTop(false)
-            }
-        };
+    // useEffect(() => {
+    //     const onScroll = () => {
+    //         if (window.pageYOffset > 10) {
+    //             setShowTop(true)
+    //         } else {
+    //             setShowTop(false)
+    //         }
+    //     };
     
-        window.addEventListener("scroll", onScroll);
-        return () => window.removeEventListener("scroll", onScroll);
-    }, []);
+    //     window.addEventListener("scroll", onScroll);
+    //     return () => window.removeEventListener("scroll", onScroll);
+    // }, []);
 
-    const goToTop = () => {
-        window.scrollTo({
-          top: 0,
-          behavior: 'smooth',
-        });
-    };
+    // const goToTop = () => {
+    //     window.scrollTo({
+    //       top: 0,
+    //       behavior: 'smooth',
+    //     });
+    // };
 
     return (
     <>
@@ -154,7 +154,7 @@ const Custom = ({...props}) => {
                     
                     <button
                         type="button" 
-                        className='h-7 pt-1 pb-1 pl-3 pr-3 ml-5 text-sm font-bold text-white bg-teal-700 rounded'
+                        className='h-7 pt-1 pb-1 pl-3 pr-3 ml-5 mt-1 text-sm font-bold text-white bg-teal-700 rounded'
                     >
                         <a  href='https://news-feed.sanity.studio/desk' target="_blank">
                             Edit Terms
@@ -168,7 +168,7 @@ const Custom = ({...props}) => {
            <div className="bg-white p-2 w-[900px] mr-5">{props.customString}</div>
             <button
                 type="button" 
-                className='h-7 pb-1 pt-1 pl-3 pr-3 text-sm font-bold text-white bg-teal-700 rounded'
+                className='h-7 pb-1 pt-1 pl-3 pr-3 mt-1 text-sm font-bold text-white bg-teal-700 rounded'
             >
                 <a  href='https://news-feed.sanity.studio/desk' target="_blank">
                     Edit Pages
@@ -176,7 +176,7 @@ const Custom = ({...props}) => {
             </button>
         </div>
         
-        {showTop ? (
+        {/* {showTop ? (
             <div className='fixed bottom-5 right-5'>
                 <button 
                     className="pt-1 pb-1 pl-3 pr-3 text-sm font-bold text-white bg-teal-700 rounded"
@@ -187,7 +187,7 @@ const Custom = ({...props}) => {
             </div>
         ) : (
             <div></div>
-        )}
+        )} */}
 
         <a href="https://github.com/jergra/info-feed-react-sanity" target="_blank">
             <div className="mt-10 mb-7 text-4xl text-teal-700"><BsGithub /></div>
