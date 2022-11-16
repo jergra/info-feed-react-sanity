@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
 import {client} from '../lib/client'
+import { BsGithub } from 'react-icons/bs';
 
 
 const Custom = ({...props}) => {
@@ -187,6 +188,11 @@ const Custom = ({...props}) => {
         ) : (
             <div></div>
         )}
+
+        <a href="https://github.com/jergra/info-feed-react-sanity" target="_blank">
+            <div className="mt-10 mb-7 text-4xl text-teal-700"><BsGithub /></div>
+        </a>
+
       </div>
     </>
   )
